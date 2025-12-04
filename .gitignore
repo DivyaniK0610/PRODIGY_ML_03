@@ -1,2 +1,17 @@
+# .gitignore
+
+# 1. Virtual Environment (NEVER push this, it is huge)
 venv/
+
+# 2. Python compiled files (Junk files)
+__pycache__/
+*.pyc
+
+# 3. The Dataset (Too large for GitHub)
 data/
+dataset/
+mixed_images/
+
+# 4. specific user uploads
+uploads/*
+!uploads/.gitkeep
