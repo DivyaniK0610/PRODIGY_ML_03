@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Classifier</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Dog vs Cat Classifier</h1>
+        <form action="/" method="post" enctype="multipart/form-data">
+            <input type="file" name="file" accept="image/*" required>
+            <button type="submit">Classify</button>
+        </form>
+
+        {% if prediction %}
+        <div class="result">
+            <img src="{{ img_url }}" alt="Uploaded Image">
+            <h2>It is a {{ prediction }}</h2>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
